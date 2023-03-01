@@ -1,0 +1,43 @@
+
+
+// //import vendors//
+@import './vendors/flaticons.css';
+@import './vendors/themify-icons.css';
+@import './vendors/reset';
+
+
+@import './abstracts/variables';
+// //import theme//
+// @import './themes/dark-theme';
+// @import './themes/flat-theme';
+
+@import "./base/base";
+
+
+// // import layout//
+@import './layout/body';
+// @import './layout/article';
+@import './layout/footer';
+@import './layout/header';
+// @import './layout/sidebar';
+ @import './layout/navbar';
+ @import './layout/article';
+ @import './layout/grid';
+
+ // import components //
+ @import './components/tuile';
+ @import './components/button'
+
+// // import pages //
+
+// @import './pages/product';
+
+
+
+
+
+
+
+
+
+

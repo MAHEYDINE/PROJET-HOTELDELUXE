@@ -1,0 +1,706 @@
+@import './vendors/flaticons.css';
+@import './vendors/themify-icons.css';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body {
+  background-color: #282828;
+  margin-left: 300px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  height: 250px;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.footer .propos {
+  width: 30%;
+  padding: 20px;
+}
+.footer .propos p {
+  margin-top: 20px;
+  font-size: 15px;
+}
+.footer .propos h3 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.footer .Contact {
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+}
+.footer .Contact p {
+  margin-bottom: 30px;
+}
+.footer .Contact .address {
+  margin-top: 30PX;
+}
+.footer .Contact a {
+  color: white;
+}
+.footer .Contact h3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.footer .Contact .icons {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.Copyright {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  height: 10px;
+  padding: 60px;
+  background-color: rgb(27, 26, 26);
+  color: rgb(145, 149, 153);
+  margin-top: 20px;
+}
+.Copyright a {
+  color: whitesmoke;
+}
+
+body .main .chambres {
+  display: flex;
+  justify-content: space-between;
+}
+body .main .check {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+body .img-back {
+  position: relative;
+  background-image: url("../images/slider/2.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: contain;
+  width: 100%;
+  height: 89vh;
+}
+body .img-back article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 93%;
+  height: 100%;
+}
+body .img-back article .centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .img-back article .centered span {
+  display: block;
+  color: #c48e43;
+  font-size: 14px;
+  margin-bottom: 30PX;
+}
+body .img-back article .centered p {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-bottom: 20PX;
+}
+body .img-back article .centered h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  width: 500px;
+  letter-spacing: 12px;
+  line-height: 50px;
+}
+body .img-back article .centered .btn {
+  background-color: rgba(34, 34, 34, 0);
+  border: 0.01em solid #ffffff;
+  color: #ffffff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+body .img-back article .centered .btn::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 50% 50% 0% 0%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+body .img-back article .centered .btn:hover::before {
+  top: 0px;
+  border-radius: 0;
+}
+body .img-back article .centered .btn:hover {
+  color: #956e36;
+  transition: all 0.5s;
+}
+body .content {
+  background-color: #222222;
+}
+body .content .star {
+  display: flex;
+  padding: 70px;
+  gap: 20px;
+}
+body .content .star img {
+  width: 200px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .content .star .img-star-left {
+  margin-top: 80px;
+}
+body .content .star .star-left {
+  color: white;
+}
+body .content .star .star-left .star-left-bottom {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  color: gray;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 20px;
+}
+body .content .star .star-left .star-left-top {
+  line-height: 30px;
+}
+body .content .star .star-left .star-left-top span {
+  font-size: 14px;
+}
+body .content .star .star-left .star-left-top p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #a27638;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+body .content .star .star-left .star-left-top h2 {
+  font-size: 36px;
+  font-family: "Gilda Display", serif;
+  margin-top: 10px;
+}
+body .content .star .star-left .bar-star {
+  color: #a27638;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  height: 500vh;
+}
+body .nav-bar {
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 3000;
+  color: aliceblue;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+body .nav-bar .nav-bar-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+body .nav-bar .nav-bar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 70px;
+  font-family: "Barlow", sans-serif;
+}
+body .nav-bar .nav-bar-menu .activ {
+  color: #8e6731;
+}
+body .nav-bar .nav-bar-menu a {
+  overflow: hidden;
+}
+body .nav-bar .nav-bar-menu span {
+  color: gray;
+  font-size: 14px;
+  padding-left: 35px;
+  transition: 0.6s ease;
+  line-height: 20px;
+}
+body .nav-bar .nav-bar-menu span:hover {
+  color: #977e5b;
+  transform: scale(1.5);
+  text-shadow: 1px 1px 10px rgba(142, 103, 49, 0.2);
+  font-size: 15px;
+}
+body .nav-bar .nav-bar-title h1 {
+  font-family: "Gilda Display", serif;
+  font-size: 27px;
+  color: #8e6731;
+  letter-spacing: 0.15em;
+  font-weight: 100;
+}
+body .nav-bar .nav-bar-title h2 {
+  font-size: 11px;
+  letter-spacing: 0.6em;
+  margin-top: 4px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: rgb(255, 255, 255);
+}
+body .nav-bar .nav-bar-title a .nav-bar-star {
+  display: block;
+  color: #8e6731;
+  margin-bottom: 10px;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+}
+body .nav-bar .nav-bar-reservation {
+  display: flex;
+  gap: 10px;
+  padding-left: 35px;
+  font-family: "Barlow", sans-serif;
+}
+body .nav-bar .nav-bar-reservation .nav-bar-number #information-reservation {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: gray;
+}
+body .nav-bar .nav-bar-reservation .nav-bar-number #num-tel {
+  color: #8e6731;
+  font-size: 24px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+body .nav-bar .nav-bar-reservation .nav-bar-phone {
+  color: #8e6731;
+  font-size: 34px;
+  padding-top: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(198, 187, 187, 0.2509803922);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 15px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(253, 202, 0);
+}
+
+.chambres {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 17px;
+  font-family: "Barlow", sans-serif;
+}
+.chambres .chambres1, .chambres .chambres2, .chambres .chambres3 {
+  grid-column: span 2;
+}
+.chambres .chambres4, .chambres .chambres5 {
+  grid-column: span 3;
+}
+
+.spa {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  font-family: "Barlow", sans-serif;
+  color: rgb(255, 255, 255);
+  margin: 10px;
+}
+.spa h2 {
+  font-size: 30px;
+}
+.spa .text {
+  margin: 10px;
+}
+.spa p {
+  color: #8e6731;
+  font-size: 15px;
+  padding: 20px;
+}
+.spa a {
+  color: wheat;
+  background-color: #8e6731;
+  padding: 10px;
+}
+
+.Options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+  color: white;
+  gap: 10px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+.Options .opt {
+  font-size: 15px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.Options .opt H2 {
+  font-size: 50px;
+  padding: 20px;
+}
+.Options .opt .flaticon-call,
+.Options .opt a {
+  color: #8e6731;
+  font-size: 25px;
+  margin: 10px;
+}
+.Options .box1 {
+  background-color: #303030;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  font-size: 15px;
+  width: 300px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.Options .box1 p {
+  font-size: 3em;
+  color: #8e6731;
+}
+.Options .box1 .ti-check, .Options .box1 .ti-close {
+  color: #8e6731;
+  margin: 10px;
+}
+.Options .box2 {
+  background-color: #303030;
+  padding: 20px;
+  margin: 10px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-align: center;
+  width: 300px;
+}
+.Options .box2 p {
+  font-size: 3em;
+  color: #8e6731;
+}
+.Options .box2 .ti-check, .Options .box2 .ti-close {
+  color: #8e6731;
+  margin: 10px;
+}
+.Options h3 {
+  font-size: 25PX;
+  padding: 10PX;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 10px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.grid-container p {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.grid-container > div {
+  background-color: #303030;
+  font-size: 30px;
+  padding: 20px;
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+  color: white;
+}
+.grid-container > div .flaticon-wifi, .grid-container > div .flaticon-car, .grid-container > div .flaticon-world,
+.grid-container > div .flaticon-swimming, .grid-container > div .flaticon-bed, .grid-container > div .flaticon-breakfast {
+  color: #8e6731;
+  font-size: 2em;
+  padding: 10px;
+}
+
+.h2-enplus {
+  font-size: 40px;
+  padding: 20px;
+  color: white;
+}
+
+.container1 {
+  padding: 70px;
+  background-color: #1E1E1E;
+}
+.container1 .chambre-title p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #a27638;
+  margin-bottom: 14px;
+  letter-spacing: 0.3em;
+  font-size: 12px;
+}
+.container1 .chambre-title .h2-tuile {
+  font-family: "Gilda Display", serif;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+.container1 .tuile {
+  position: relative;
+  overflow: hidden;
+}
+.container1 .tuile img {
+  transition: 0.5s ease;
+}
+.container1 .tuile:hover img {
+  transform: scale(1.09);
+  filter: brightness(70%);
+  transition: 1s ease;
+}
+.container1 .tuile figcaption {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  color: #f6f6f6;
+  display: flex;
+  align-items: flex-start;
+  font-size: 2em;
+  writing-mode: vertical-rl;
+  justify-content: space-between;
+}
+.container1 .tuile figcaption .moove-hover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.container1 .tuile figcaption .moove-hover:hover {
+  transform: translateY(-55px);
+  transition: all 0.5s ease;
+}
+.container1 .tuile figcaption .moove-hover:hover .hidden-hover-left {
+  bottom: 185px;
+  position: absolute;
+  left: 0;
+}
+.container1 .tuile figcaption .moove-hover:hover .hidden-hover-right {
+  bottom: 185px;
+  position: absolute;
+  right: 0;
+}
+.container1 .tuile figcaption .moove-hover:hover h3::after {
+  width: 87.7%;
+  transition: all 1s ease;
+}
+.container1 .tuile figcaption a .reserver {
+  position: absolute;
+  display: block;
+  transform: rotate(180deg);
+  transform-origin: center;
+  color: white;
+  font-size: 14px;
+  font-family: "Barlow Condensed", sans-serif;
+  border: 1px solid rgba(197, 197, 197, 0.712);
+}
+.container1 .tuile figcaption a .reserver.haut {
+  padding: 1.9% 1.55%;
+  top: 4.7%;
+  right: 6.7%;
+  letter-spacing: 0.25em;
+}
+.container1 .tuile figcaption a .reserver.bas {
+  padding: 1.9% 1.55%;
+  top: 4.7%;
+  right: 4.3%;
+  letter-spacing: 0.25em;
+}
+.container1 .tuile figcaption .saw {
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  writing-mode: horizontal-tb;
+}
+.container1 .tuile figcaption .saw.top {
+  bottom: 10.3%;
+  left: 6.1%;
+}
+.container1 .tuile figcaption .saw.bottom {
+  bottom: 14%;
+  left: 3.99%;
+}
+.container1 .tuile figcaption .saw p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+}
+.container1 .tuile figcaption h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 0.84em;
+  position: relative;
+}
+.container1 .tuile figcaption h3::after {
+  content: "";
+  position: absolute;
+  height: 0.01em;
+  width: 60px;
+  background-color: aliceblue;
+  left: 0;
+  bottom: -12px;
+  transition: 0.5s ease;
+}
+.container1 .tuile figcaption .hidden-hover {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  justify-content: space-between;
+  top: 200px;
+}
+.container1 .tuile figcaption .hidden-hover .flaticon {
+  display: block;
+  font-size: 0.5em;
+  letter-spacing: 1em;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-left {
+  letter-spacing: 8px;
+  color: rgb(255, 255, 255);
+  writing-mode: horizontal-tb;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right {
+  writing-mode: horizontal-tb;
+  margin-right: 20px;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right .btn-tuile {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right .btn-tuile span:hover {
+  color: #a27638;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right .btn-tuile .arrow {
+  background-color: rgb(255, 255, 255);
+  height: 0.09em;
+  width: 0.4em;
+  margin-left: 0.4em;
+  position: relative;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right .btn-tuile .arrow::after {
+  position: absolute;
+  content: "";
+  background-color: rgb(252, 255, 245);
+  height: 0.07em;
+  width: 4px;
+  right: 0;
+  top: 0em;
+  transform: rotate(-45deg);
+  transform-origin: right top;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right .btn-tuile .arrow::after::after:hover {
+  color: #a27638;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right .btn-tuile .arrow::before {
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  height: 0.07em;
+  width: 4px;
+  right: 0;
+  top: 0.03em;
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+  border: 0.4em;
+}
+.container1 .tuile figcaption .hidden-hover .hidden-hover-right .btn-tuile .arrow::before::before:hover {
+  color: #a27638;
+}
+
+.btn {
+  display: block;
+  padding: 15px 20px;
+  background-color: rgb(255, 255, 255);
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  margin-top: 30px;
+}/*# sourceMappingURL=style.css.map */
